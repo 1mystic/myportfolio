@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Dark Glass Theme</title>
+    
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">1mystic</a>
+            
+            <button class="menu-button">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M3 12h18M3 6h18M3 18h18"/>
+                </svg>
+            </button>
+
+            <div class="nav-links">
+                <a href="" class="nav-link ">Home</a>
+                <a href="#to_skills" class="nav-link">Skills</a>
+                <a href="#to_education" class="nav-link">Education</a>
+                <a href="#to_cert" class="nav-link">Certifications</a>
+                <a href="#to_contact" class="nav-link">Contact</a>
+                <a href="#to_proj" class="cta-button"><b>Projects</b></a>
+            </div>
+        </div>
+    </nav>
+
+    <script>
+        const menuButton = document.querySelector('.menu-button');
+        const navLinks = document.querySelector('.nav-links');
+
+        menuButton.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+    </script>
+
+    <div class="rhombus-container">
+        <div class="rhombus">
+          <div class="rhombus-border"></div>
+          <div class="decoration"></div>
+        </div>
+      </div>
+
+      <div class="rhombus-container">
+        <div class="rhombus2">
+          <div class="rhombus-border2"></div>
+          <div class="decoration2"></div>
+        </div>
+      </div>
+    
+      <script>
+        const rhombus = document.querySelector('.rhombus');
+        //const rhombus2 = document.querySelector('.rhombus2');
+        const decoration = document.querySelector('.decoration');
+        let rotation = 65;
+
+        
+        
+        // Create decorative dots
+        const createDots = () => {
+          const numDots = 24;
+          for (let i = 0; i < numDots; i++) {
+            const dot = document.createElement('div');
+            dot.className = 'dots';
+            const angle = (i * 360 / numDots) * (Math.PI / 180);
+            const radius = 220;
+            const x = radius * Math.cos(angle) + 92;
+            const y = radius * Math.sin(angle) + 92;
+            dot.style.left = `${x}px`;
+            dot.style.top = `${y}px`;
+            decoration.appendChild(dot);
+          }
+        }
+    
+        createDots();
+    
+        // Handle scroll rotation
+        window.addEventListener('wheel', (e) => {
+          if (e.deltaY > 0) {
+            rotation += 5;
+          } else {
+            rotation -= 5;
+          }
+          rhombus.style.transform = `rotate(${rotation}deg)`;
+          //rhombus2.style.transform = `rotate(${rotation}deg)`
+        });
+      </script>
+
+
+
+      
+
+    <div class="background-shapes">
+        <div class="shape shape-1"></div>
+        <div class="shape shape-2"></div>
+    </div>
+
+    <div  id="about_me" class="container">
+        <div class="section_enc">
+            <div class="sec_card">
+                <div class="left">
+                <h2>Atharv Khare</h2>
+                <p style=""> Computer Science Student, majoring in Data Science,
+                     and a budding 
+                    Full Stack Developer.
+                    I am a straightforward and sometimes timid individual who is always eager to touch the soul of everything there is to learn. Intensely curious
+                    about all things tech, and am constantly striving for personal and academic growth with integrity.
+                    </p>
+
+                <a style="bottom:0;  margin-top: 0rem;" href="https://www.linkedin.com/in/atharv-khare-a10456274/" class="continue-link" target="_blank">
+                <img class="social_icon" src="li.png" alt="">
+                </a>
+                <a style="bottom:0;  margin-top: 0rem;" href="https://github.com/1mystic" class="continue-link" target="_blank">
+                    <img class="social_icon" src="gt.png" alt="">
+                </a>
+
+                   
+
+                </div>
+                <div class=""right> 
+                    <img 
+                    class="pic" src="picp.jpg" alt="My image atharvk">
+                </div>
+
+            </div>
+            
+        </div>
+        
+        </div>
+
+        <div class="section_enc" >
+            <div class="sec_card" id="exp">
+                <div class="left">
+                <h2>Experience </h2>
+                <div class="experience-item">
+                    <h3>Data Science with Python Trainee</h3>
+                    <p>YBI Foundation | Online Training</p>
+                    <p>June 2024 - July 2024</p>
+                    <ul>
+                        <li>Completed comprehensive training in Python for data science applications</li>
+                        <li>Developed practical skills in data analysis, visualization, and machine learning techniques</li>
+                    </ul>
+                </div>
+
+                <div class="experience-item">
+                    <h3>Web Developer Intern</h3>
+                    <p>EISystems Technologies | Bhopal, MP</p>
+                    <p>April 2024 - June 2024</p>
+                    <ul>
+                        <li>Assisted in developing and maintaining web applications</li>
+                    </ul>
+                </div>
+
+                <div class="experience-item">
+                    <h3>AWS Data Engineering Intern</h3>
+                    <p>EduSkills Foundation | Bhopal, MP (Virtual)</p>
+                    <p>January 2024 - March 2024</p>
+                    <ul>
+                        <li>Completed AWS Data Engineering course, earning certification</li>
+                        <li>Developed foundational skills in cloud-based data engineering and AWS services</li>
+                    </ul>
+                </div>
+            </div>
+            </div>
+            
+        </div>
+        <h4 style="display:hidden;" id="to_proj"> </h4>
+        <div class="section_enc" >
+            <div class="sec_card" id="projects_sec">
+                <div class="left">
+                <h2>Projects</h2>
+                <a href="https://sites.google.com/ds.study.iitm.ac.in/atharvkhare/courses/statistics-ii" target="_blank">
+                 Statistics Projects</a>
+                <br>
+                <a href="https://drive.google.com/file/d/1H11M49TmLvy7qEye5Y0C1TFRHGnpopti/view" target="_blank">
+                    Dersigns</a>
+                <br>
+                <a>Project link 1</a>
+                </div>
+                <a>
+                    right
+                </a>
+        </div>
+
+        <div id="my_projects" class="cards-grid">
+            <div class="card">
+                <h2>Learn Firebase</h2>
+                <p>A deep dive into Firebase, a cloud service from Google that lets you build powerful apps by just using HTML, CSS and JavaScript without a backend. This course teaches you everything you need to know.</p>
+                <a href="#" class="continue-link">
+                    Welcome to the course!
+                    <div class="profile-pic"></div>
+                </a>
+            </div>
+
+            <div class="card">
+                <h2>Learn UI Design</h2>
+                <p>This massive UI design course teaches you to build beautiful and well-functioning user interfaces using HTML and CSS. It's filled with interactive tutorials to help you master modern design principles.</p>
+                <a href="#" class="continue-link">
+                    Who I am, What we'll learn & Prerequisites
+                    <div class="profile-pic"></div>
+                </a>
+            </div>
+          
+        </div>
+        <h4 style="display:hidden;" id="to_skills"> </h4>
+        <div class="section_enc">
+            <div class="sec_card">
+                <div class="left">
+                <h2>My Stack</h2>
+
+                <p class="skill"> Python </p>
+                <p class="skill"> Flask </p>
+                <p class="skill"> JavaScript </p>
+                <p class="skill"> Vue.Js </p>
+                <p class="skill"> CSS </p>
+                <p class="skill"> HTML </p>
+                <p class="skill"> SQL </p>
+                <p class="skill"> Sqlite3 </p>
+                <p class="skill"> SqlAlchemy</p>
+                <p class="skill"> PostgreSQL </p>
+                <p class="skill"> RestAPI </p>
+                <p class="skill"> RESTful</p>
+                <p class="skill"> Pandas</p>
+                <p class="skill"> Matplotlib </p>
+                <p class="skill"> Numpy</p>
+                <p class="skill"> Statistics </p>
+                <p class="skill"> MS Office</p>
+                <p class="skill"> Celery</p>
+                <p class="skill"> Git</p>
+                <p class="skill"> Bayesian Statistics </p>
+                <p class="skill"> Django </p>
+                <p class="skill"> C++ </p>
+              
+                    <div class="profile-pic"></div>
+               
+                </div>
+                
+            </div>
+        </div>
+        <h4 style="display:hidden;" id="to_education"> </h4>
+        <div class="section_enc">
+            <div class="sec_card">
+                <div class="left">
+                <h2>Education</h2>
+                <div class="edu">
+                <h3>Indian Institute of Technology, Madras
+                </h3>
+                <p> BS in Data Science (2023-2027) |  CGPA - 8.8</p>
+                
+                </div>
+
+               
+                    <div class="profile-pic"></div>
+                </div>
+               
+            </div>
+        </div>
+        <h4 style="display:hidden;" id="to_cert"> </h4>
+        <div class="section_enc">
+            <div class="sec_card">
+                <div class="left">
+                <h2>Certifications</h2>
+                
+                <div class="certb">
+                <p>- AWS Academy Graduate - AWS Academy Cloud Foundations</p>
+                <p>- 'Presenting Data' Certification by Forage</p>
+                <p>- Accenture North America - Data Analytics and Visualization Job Simulation</p>
+                <p>- Verizon - Cloud Platform Job Simulation</p>
+                <p>- Mr. Focused by SPS SN</p>
+                <p>- Winner - Group Leader for Cooperative Learning</p>
+                <p>- Winner - Creative Writing (Inter School competition)</p>
+                <p>- LIC Student of the year (2022)</p>
+                </div>
+                    <div class="profile-pic"></div>
+                </a>
+                </div>
+            </div>
+        </div>
+        
+        <h4 style="display:hidden;" id="to_contact"> </h4>
+        <div class="section_enc">
+            <div class="sec_card">
+                <div class="left">
+                <h2>Contact</h2>
+
+                <p class="skill">Indian Institute of Technology, Madras</p>
+                <p> BS in Data Science</p>
+                <a href="#" class="continue-link">
+                    Who I am, What we'll learn & Prerequisites
+                    <div class="profile-pic"></div>
+                </a>
+                </a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-analytics.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+      
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        const firebaseConfig = {
+          apiKey: "AIzaSyBOsjDcged2AP_N63fekFtoTSyZktadWF8",
+          authDomain: "portfolio-a8441.firebaseapp.com",
+          projectId: "portfolio-a8441",
+          storageBucket: "portfolio-a8441.firebasestorage.app",
+          messagingSenderId: "806972159113",
+          appId: "1:806972159113:web:4fcea8440abd4c9c318258",
+          measurementId: "G-2FN891K5E5"
+        };
+      
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+      </script>
+</body>
+</html>
