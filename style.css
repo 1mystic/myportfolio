@@ -293,7 +293,7 @@ body {
 
 .sec_card{
     display: flex;
-    padding: 2.8rem !important;    
+    padding: 2.8rem ;    
 }
 .left{
     flex : 1 1 0;
@@ -516,38 +516,18 @@ body {
 
 
 
-@media (max-width: 768px) {
-    .nav-links {
-        display: none;
-        flex-direction: column;
-        gap: 10px;
-        background-color: #333;
-        position: absolute;
-        top: 50px;
-        right: 20px;
-        width: 200px;
-        padding: 10px;
-        border-radius: 8px;
-    }
+@media (max-width: 768px) {    
 
-    .nav-links.active {
-        display: flex;
-    }
-
-    .menu-button {
-        display: block;
-        background: none;
-        border: none;
-        color: #fff;
-        cursor: pointer;
-    }
+   
 
     .sec_card {
         flex-direction: column;
+        padding : 0.4rem;
     }
 
     .left, .right {
         width: 100%;
+        border :none;
     }
 
     .pic {
