@@ -516,25 +516,29 @@ body {
 
 
 
-@media (max-width: 768px) {    
-
-   
+@media (max-width: 768px) {
+    
 
     .sec_card {
         flex-direction: column;
-        padding : 0.4rem;
+        padding: 0.4rem;
     }
 
     .left, .right {
         width: 100%;
-        border :none;
+        border : none;
     }
 
     .pic {
         width: 100%;
         height: auto;
     }
-}
+    
+    .skill{
+        padding: 0.2rem 0.5rem;
+        margin: 0.2rem;
+
+    }
 
 .background-shapes {
     position: relative;
@@ -562,8 +566,6 @@ body {
     height: 300px;
     background: linear-gradient(45deg, #a8e6cf, #34db509c);
 }
-
-@media (max-width: 768px) {
     .shape-1, .shape-2 {
         width: 200px;
         height: 200px;
