@@ -344,27 +344,45 @@ body {
     line-height: 1.5;
     margin-bottom: 1.5rem;
 }
-
-.continue-link {
+.continue-link, .social_link {
     display: inline-block;    
     color: #98C9A3;
     text-decoration: none;
     font-size: 1.5rem;
+    
 }
-
-.social-links{
-    display: flex;
-    gap: 0.5rem;
-    margin-top: 2rem;
+.social_link{
+    margin-right: 0.5rem;
+    
 }
-
-.social_icon{
+.social_icon,.linkedin{
     margin: 1rem 0.5rem 0 0rem;
     width: 3rem;
-    border-radius: 5rem;       
+    border-radius: 5rem;      
+    transition: all 0.3s ease; 
 }
-
-
+.social_icon:hover{ 
+    transform: translateY(-2px) translateX(1px) scale(1.2);   
+    box-shadow: 0 5px 13px rgba(170, 221, 181, 0.3);
+    
+    background-color: #c0c94b;
+    src : "linc.png";
+}
+.linkedin:hover{        
+    content: url('linc.png');   
+}
+.github:hover{        
+    content: url('git.png');   
+}
+.hackerank:hover{        
+    content: url('hk1.png');   
+}
+.leetc:hover{        
+    content: url('lc.png');   
+}
+.mail:hover{        
+    content: url('email.png');   
+}
 
 .profile-pic {
     width: 5px;
