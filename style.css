@@ -222,6 +222,11 @@ body {
 
 /* Responsive design */
 @media (max-width: 768px) {
+    body {
+        padding: 0.5rem;
+        
+    }
+    
     .menu-button {
         display: block;
     }
