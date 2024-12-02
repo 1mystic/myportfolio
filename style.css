@@ -222,11 +222,6 @@ body {
 
 /* Responsive design */
 @media (max-width: 768px) {
-    body {
-        padding: 0.5rem 0.65rem;
-        
-    }
-    
     .menu-button {
         display: block;
     }
@@ -349,6 +344,7 @@ body {
     line-height: 1.5;
     margin-bottom: 1.5rem;
 }
+
 .continue-link, .social_link {
     display: inline-block;    
     color: #98C9A3;
@@ -388,6 +384,8 @@ body {
 .mail:hover{        
     content: url('email.png');   
 }
+
+
 
 .profile-pic {
     width: 5px;
@@ -558,7 +556,7 @@ body {
     }
     
     .skill{
-        padding: 0.2rem 0.5rem;
+        padding: 0.4rem 0.8rem;
         margin: 0.2rem;
 
     }
