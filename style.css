@@ -220,39 +220,6 @@ body {
     padding: 0.5rem;
 }
 
-/* Responsive design */
-@media (max-width: 768px) {
-    .menu-button {
-        display: block;
-    }
-
-    .nav-links {
-        display: none;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        right: 0;
-        flex-direction: column;
-        background: rgba(17, 40, 30, 0.95);
-        padding: 1rem;
-        gap: 1rem;
-    }
-
-    .nav-links.active {
-        display: flex;
-    }
-
-    .nav-link {
-        width: 100%;
-        text-align: center;
-    }
-
-    .cta-button {
-        width: 100%;
-        text-align: center;
-        margin-top: 0.5rem;
-    }
-}
 
 /* Hero section */
 
@@ -263,9 +230,62 @@ body {
 }
 
 
+ .social_link {
+    display: inline-block;    
+    color: #98C9A3;
+    text-decoration: none;
+    font-size: 1.5rem;
+    
+}
+.social_link{
+    margin-right: 0.5rem;
+    
+}
+.social_icon,.linkedin{
+    margin: 1rem 0.5rem 0 0rem;
+    width: 3rem;
+    border-radius: 5rem;      
+    transition: all 0.3s ease; 
+}
+.social_icon:hover{ 
+    transform: translateY(-2px) translateX(1px) scale(1.2);   
+    box-shadow: 0 5px 13px rgba(170, 221, 181, 0.3);
+    
+    background-color: #c0c94b;
+    src : "linc.png";
+}
+.linkedin:hover{        
+    content: url('linc.png');   
+}
+.github:hover{        
+    content: url('git.png');   
+}
+.hackerank:hover{        
+    content: url('hk1.png');   
+}
+.leetc:hover{        
+    content: url('lc.png');   
+}
+.mail:hover{        
+    content: url('email.png');   
+}
+
+
+
+.profile-pic {
+    width: 5px;
+    height: 32px;
+    border-radius: 50%;
+    background: #98C9A3;
+    animation: moveAlongPath 3s ease-in-out infinite alternate;
+    transform-origin: 100% 100%;
+    margin-left: auto;
+}
+
+
 .cards-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
     gap: 2rem;
     padding: 1rem;
     margin : 2rem auto ;
@@ -345,57 +365,6 @@ body {
     margin-bottom: 1.5rem;
 }
 
-.continue-link, .social_link {
-    display: inline-block;    
-    color: #98C9A3;
-    text-decoration: none;
-    font-size: 1.5rem;
-    
-}
-.social_link{
-    margin-right: 0.5rem;
-    
-}
-.social_icon,.linkedin{
-    margin: 1rem 0.5rem 0 0rem;
-    width: 3rem;
-    border-radius: 5rem;      
-    transition: all 0.3s ease; 
-}
-.social_icon:hover{ 
-    transform: translateY(-2px) translateX(1px) scale(1.2);   
-    box-shadow: 0 5px 13px rgba(170, 221, 181, 0.3);
-    
-    background-color: #c0c94b;
-    src : "linc.png";
-}
-.linkedin:hover{        
-    content: url('linc.png');   
-}
-.github:hover{        
-    content: url('git.png');   
-}
-.hackerank:hover{        
-    content: url('hk1.png');   
-}
-.leetc:hover{        
-    content: url('lc.png');   
-}
-.mail:hover{        
-    content: url('email.png');   
-}
-
-
-
-.profile-pic {
-    width: 5px;
-    height: 32px;
-    border-radius: 50%;
-    background: #98C9A3;
-    animation: moveAlongPath 3s ease-in-out infinite alternate;
-    transform-origin: 100% 100%;
-    margin-left: auto;
-}
 @keyframes moveAlongPath {
     0%, 100% {
     transform: rotate(-90deg);  /* 12 o'clock */
@@ -411,18 +380,18 @@ body {
     transform: translate(-16px, -16px);
 }
 
-#projects_sec a {
+.continue-link {
     display: inline-block;
     color: #c1eecb;
     text-decoration: none;
     font-weight: 600;
-    transition: color 0.3s ease;
-    margin : 0.5rem ; 
-    background-color: #a8e6cf21;
-    padding: 0.5rem 1rem;
+    transition: color 0.3s ease;   
+    background-color: #a8e6cf21;   
+    padding: 0.5rem 1.2rem; 
+    font-size: 1.2rem;
     border-radius: 2rem;
 }
-#projects_sec a:hover {
+ .continue-link:hover {
     color: #0e0d0d;
     font-weight: 700;
     background-color: #a8e6c4a9;
@@ -537,7 +506,50 @@ body {
 
 
 
+/* Responsive design */
 @media (max-width: 768px) {
+    .menu-button {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        background: rgba(17, 40, 30, 0.95);
+        padding: 1rem;
+        gap: 1rem;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-link {
+        width: 100%;
+        text-align: center;
+    }
+
+    .cta-button {
+        width: 100%;
+        text-align: center;
+        margin-top: 0.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+
+    
+    body {
+        padding: 0.5rem;
+    }
+
+    .cards-grid {
+        grid-template-columns: 1fr;
+    }
     
 
     .sec_card {
@@ -558,7 +570,15 @@ body {
     .skill{
         padding: 0.4rem 0.8rem;
         margin: 0.2rem;
+        font-size: 1rem !important;
+    }
 
+    .certb{
+        padding: 1.2rem 1rem;
+        margin : 0.8rem 0 0 0;
+    }
+    .certb p {
+        font-size: 1rem;
     }
 
 .background-shapes {
