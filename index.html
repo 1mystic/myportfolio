@@ -56,7 +56,7 @@
         const rhombus = document.querySelector('.rhombus');
         //const rhombus2 = document.querySelector('.rhombus2');
         const decoration = document.querySelector('.decoration');
-        let rotation = 65;
+        //let rotation = 35;
 
         
         
@@ -77,9 +77,29 @@
         }
     
         createDots();
-    
+        const updateRotation = () => {
+            const scrollPosition = (window.scrollY + window.innerHeight) / 1.8;
+            const rotation = scrollPosition / 10; // Adjust the divisor to control rotation speed
+            rhombus.style.transform = `rotate(${rotation}deg)`;
+        };
+
+        // Set initial rotation
+        updateRotation();
+
         // Handle scroll rotation
-        window.addEventListener('wheel', (e) => {
+        window.addEventListener('scroll', updateRotation);
+     /*
+        // Handle scroll rotation
+        window.addEventListener('scroll', () => {
+          const scrollPosition = window.scrollY;
+          rotation = scrollPosition / 12; // Adjust the divisor to control rotation speed
+          rhombus.style.transform = `rotate(${rotation}deg)`;
+          //rhombus2.style.transform = `rotate(${rotation}deg)`;
+        });
+ */
+       
+         // Handle scroll rotation
+        /*window.addEventListener('wheel', (e) => {
           if (e.deltaY > 0) {
             rotation += 5;
           } else {
@@ -87,7 +107,8 @@
           }
           rhombus.style.transform = `rotate(${rotation}deg)`;
           //rhombus2.style.transform = `rotate(${rotation}deg)`
-        });
+        });*/
+       
       </script>
 
 
@@ -110,7 +131,6 @@
                     about all things tech, and am constantly striving for personal and academic growth with integrity.
                     </p>
 
-                
                 <a style="bottom:0;  margin-top: 0rem;" href="https://www.linkedin.com/in/atharv-khare-a10456274/" class="social_link" target="_blank">
                 <img class="social_icon linkedin" src="li.png" alt="">
                 </a>
@@ -127,7 +147,6 @@
                 <a style="bottom:0;  margin-top: 0rem;" href="mailto:atharvkhare18@gmail.com" class="social_link " target="_blank">
                     <img class="social_icon mail" src="mail.png" alt="">
                 </a>
-
 
                    
 
@@ -184,14 +203,16 @@
             <div class="sec_card" id="projects_sec">
                 <div class="left">
                 <h2>Projects</h2>
-                <a href="https://drive.google.com/file/d/1H11M49TmLvy7qEye5Y0C1TFRHGnpopti/view" target="_blank">
-                My Designs </a>
-                <br>
                 <a href="https://sites.google.com/ds.study.iitm.ac.in/atharvkhare/courses/statistics-ii" target="_blank">
                  Statistics Projects</a>
                 <br>
+                <a href="https://drive.google.com/file/d/1H11M49TmLvy7qEye5Y0C1TFRHGnpopti/view" target="_blank">
+                    Dedigns</a>
+                <br>
+                <a>Project link 1</a>
+                </div>
                 <a>
-                    
+                    right
                 </a>
         </div>
 
