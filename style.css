@@ -308,7 +308,7 @@ body {
 }
 
 .card:hover, .sec_card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-5px) translateX(5px);
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
     border: 7px solid white ;
 }
