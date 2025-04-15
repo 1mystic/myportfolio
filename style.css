@@ -304,6 +304,7 @@ body {
     border: 1px solid rgba(255, 255, 255, 0.125);
     padding: 2rem;
     transition: all 0.3s ease;
+    border: 7px solid #0b1e1e;
 }
 
 .card:hover, .sec_card:hover {
